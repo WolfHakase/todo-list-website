@@ -1,0 +1,2 @@
+A project meant to showcase some programming ability. In this mono-repo you will find a Go backend, a React frontend and E2E tests using Selenium. 
+The backend will be a dockerized REST api written in Go using PostgresDB.
