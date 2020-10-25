@@ -1,5 +1,7 @@
-class TodoItemListPage extends React.Component {
+import React from "react";
+
+export class TodoItemListPage extends React.Component {
     render() {
-        return <p></p>;
+        return <p>This will be the list page</p>;
     }
 }
