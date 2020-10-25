@@ -6,7 +6,10 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
         // Navigate to Url
         await driver.get('http://localhost:3000/');
 
-        const createButton = driver.findElement(By.id('navigate-to-create-page-button'))
+        driver.findElement(By.id('navigate-to-create-page-button')).then(null, function(err) {
+            if (err.name === "NoSuchElementError")
+                console.log("Element was missing!");
+        });
     }
     finally{
         driver.quit();
