@@ -6,7 +6,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
         // Navigate to Url
         await driver.get('http://localhost:3000/');
 
-        const createButton = driver.findElement(By.id('create-todo-item-button'))
+        const createButton = driver.findElement(By.id('navigate-to-create-page-button'))
     }
     finally{
         driver.quit();
