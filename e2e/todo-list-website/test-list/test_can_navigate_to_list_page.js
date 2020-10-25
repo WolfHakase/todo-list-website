@@ -6,6 +6,9 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
         // Navigate to Url
         await driver.get('http://localhost:3000/');
     }
+    catch(e) {
+        console.log("Couldn't navigate to page!");
+    }
     finally{
         driver.quit();
     }
