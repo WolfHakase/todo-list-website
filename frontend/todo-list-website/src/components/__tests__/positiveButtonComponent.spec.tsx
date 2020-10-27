@@ -1,26 +1,26 @@
 import {render, screen} from "@testing-library/react";
-import {NavigateButtonComponent} from "../../components/navigateButtonComponent";
+import {PositiveButtonComponent} from "../positiveButtonComponent";
 import React from "react";
 
 test('renders without crashing', () => {
-    const expected_target = 'todo target'
+    const handle_click = jest.fn()
     const expected_content = 'button content'
-    render(<NavigateButtonComponent/>);
+    render(<PositiveButtonComponent onClick={handle_click} content={expected_content}/>);
 });
 
 test('renders with content', async () => {
-    const expected_target = 'todo target'
+    const handle_click = jest.fn()
     const expected_content = 'button content'
-    render(<NavigateButtonComponent/>);
+    render(<PositiveButtonComponent onClick={handle_click} content={expected_content}/>);
     const actual_content = await screen.findByText(expected_content)
     expect(actual_content).toBeTruthy();
 })
 
 test('button navigates to target', async () => {
-    const expected_target = 'todo target'
+    const handle_click = jest.fn()
     const expected_content = 'button content'
-    render(<NavigateButtonComponent/>);
+    render(<PositiveButtonComponent onClick={handle_click} content={expected_content}/>);
     const button = await screen.findByText(expected_content)
     button.click()
-    expect(button.textContent).toBe(expected_button_content);
+    expect(handle_click).toHaveBeenCalledTimes(1);
 })
