@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import {PositiveButtonComponent} from "../positiveButtonComponent";
+import {PositiveButtonComponent} from "../PositiveButtonComponent";
 import React from "react";
 
 test('renders without crashing', () => {

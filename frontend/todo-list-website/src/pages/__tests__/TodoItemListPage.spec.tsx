@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react';
-import {TodoItemListPage} from '../todoItemListPage';
+import {TodoItemListPage} from '../TodoItemListPage';
 import React from 'react';
 
 test('renders without crashing', () => {
