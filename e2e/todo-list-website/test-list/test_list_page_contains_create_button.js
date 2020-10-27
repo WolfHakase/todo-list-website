@@ -1,6 +1,6 @@
 const {Builder, By, Key, until} = require('selenium-webdriver');
 
-(async function canNavigateToListPage() {
+(async function ListPageContainsCreateButton() {
     let driver = await new Builder().forBrowser('firefox').build();
     try {
         // Navigate to Url
