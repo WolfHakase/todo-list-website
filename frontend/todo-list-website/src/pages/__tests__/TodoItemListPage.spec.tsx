@@ -9,15 +9,15 @@ test('renders without crashing', () => {
 test('renders header', async () => {
     // todo change to actual page title
     render(<TodoItemListPage/>);
-    const expected_header = 'Todo header here'
-    const header = await screen.findByText(expected_header)
+    const expectedHeader = 'Todo header here'
+    const header = await screen.findByText(expectedHeader)
     expect(header).toBeTruthy();
 })
 
 test('renders create button', async () => {
     render(<TodoItemListPage/>);
-    const expected_button_content = "this is a button"
+    const expectedButtonContent = "this is a button"
     const id = 'navigate-to-create-page-button'
     const button = await screen.findByTestId(id)
-    expect(button.textContent).toBe(expected_button_content);
+    expect(button.textContent).toBe(expectedButtonContent);
 })

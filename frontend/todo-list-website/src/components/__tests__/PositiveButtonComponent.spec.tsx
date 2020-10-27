@@ -3,24 +3,24 @@ import {PositiveButtonComponent} from "../PositiveButtonComponent";
 import React from "react";
 
 test('renders without crashing', () => {
-    const handle_click = jest.fn()
-    const expected_content = 'button content'
-    render(<PositiveButtonComponent onClick={handle_click} content={expected_content}/>);
+    const handleClick = jest.fn()
+    const expectedContent = 'button content'
+    render(<PositiveButtonComponent OnClick={handleClick} Content={expectedContent}/>);
 });
 
 test('renders with content', async () => {
-    const handle_click = jest.fn()
-    const expected_content = 'button content'
-    render(<PositiveButtonComponent onClick={handle_click} content={expected_content}/>);
-    const actual_content = await screen.findByText(expected_content)
-    expect(actual_content).toBeTruthy();
+    const handleClick = jest.fn()
+    const expectedContent = 'button content'
+    render(<PositiveButtonComponent OnClick={handleClick} Content={expectedContent}/>);
+    const button = await screen.findByText(expectedContent)
+    expect(button).toBeTruthy();
 })
 
-test('button navigates to target', async () => {
-    const handle_click = jest.fn()
-    const expected_content = 'button content'
-    render(<PositiveButtonComponent onClick={handle_click} content={expected_content}/>);
-    const button = await screen.findByText(expected_content)
+test('button click event works', async () => {
+    const handleClick = jest.fn()
+    const expectedContent = 'button content'
+    render(<PositiveButtonComponent OnClick={handleClick} Content={expectedContent}/>);
+    const button = await screen.findByText(expectedContent)
     button.click()
-    expect(handle_click).toHaveBeenCalledTimes(1);
+    expect(handleClick).toHaveBeenCalledTimes(1);
 })

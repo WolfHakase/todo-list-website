@@ -1,11 +1,11 @@
 import React from "react";
 
 interface ButtonProps {
-    onClick: (event: React.MouseEvent<HTMLButtonElement>) => void,
-    content: string,
+    OnClick: (event: React.MouseEvent<HTMLButtonElement>) => void,
+    Content: string,
 }
 
 export function PositiveButtonComponent(Props: ButtonProps) {
     // todo: styling
-    return <button onClick={Props.onClick}>{Props.content}</button>;
+    return <button onClick={Props.OnClick}>{Props.Content}</button>;
 }
