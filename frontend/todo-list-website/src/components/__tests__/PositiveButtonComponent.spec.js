@@ -2,6 +2,7 @@ import {render, screen} from "@testing-library/react";
 import {PositiveButtonComponent} from "../PositiveButtonComponent";
 import React from "react";
 import {AddCircle} from '@material-ui/icons';
+import {HeaderComponent} from "../HeaderComponent";
 
 const handleClick = jest.fn()
 const expectedTestID = 'mock-test-id'
@@ -11,9 +12,16 @@ test('renders without crashing', () => {
     render(<PositiveButtonComponent OnClick={handleClick} TestID={expectedTestID} Content={expectedContent}/>);
 });
 
-test('renders with icon without crashing', async() => {
-    const expectedIcon = <AddCircle />;
-    render(<PositiveButtonComponent Icon={expectedIcon} OnClick={handleClick} TestID={expectedTestID} Content={expectedContent}/>);
+test('render matches snapshot', () => {
+    const tree = render(<PositiveButtonComponent OnClick={handleClick} TestID={expectedTestID}
+                                                         Content={expectedContent}/>);
+    expect(tree).toMatchSnapshot();
+})
+
+test('renders with icon without crashing', async () => {
+    const expectedIcon = <AddCircle/>;
+    render(<PositiveButtonComponent Icon={expectedIcon} OnClick={handleClick} TestID={expectedTestID}
+                                    Content={expectedContent}/>);
 });
 
 test('renders with content', async () => {
