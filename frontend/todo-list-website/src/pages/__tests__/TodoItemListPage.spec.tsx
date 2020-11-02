@@ -7,7 +7,6 @@ test('renders without crashing', () => {
 });
 
 test('renders header', async () => {
-    // todo change to actual page title
     render(<TodoItemListPage/>);
     const expectedHeader = 'Create Page'
     const header = await screen.findByText(expectedHeader)
