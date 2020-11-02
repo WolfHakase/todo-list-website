@@ -1,21 +1,17 @@
 import './App.css';
 import {TodoItemListPage} from './pages/TodoItemListPage'
 import React from "react";
-import { createStyles, makeStyles, Theme } from "@material-ui/core";
-
-const useStyles = makeStyles((theme: Theme) =>
-createStyles({
-    container: {
-        padding: theme.spacing(2)
-    },
-}));
+import {ThemeProvider} from '@material-ui/core/styles'
+import {theme} from "./Theme";
 
 function App() {
-  return (
-    <div className="App">
-      <TodoItemListPage/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <ThemeProvider theme={theme}>
+                <TodoItemListPage/>
+            </ThemeProvider>
+        </div>
+    );
 }
 
 export default App;
