@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Icon} from '@material-ui/core'
+import {Button} from '@material-ui/core'
 
 interface ButtonProps {
     OnClick: (event: React.MouseEvent<HTMLButtonElement>) => void,

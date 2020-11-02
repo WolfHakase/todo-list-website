@@ -1,5 +1,6 @@
-import {render, screen} from "@testing-library/react"
-import {HeaderComponent} from "../HeaderComponent"
+import React from "react";
+import {render, screen} from "@testing-library/react";
+import {HeaderComponent} from "../HeaderComponent";
 
 const expectedHeader = "mock header"
 
