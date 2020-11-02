@@ -7,7 +7,7 @@ export class TodoItemListPage extends React.Component {
     render() {
         return (
             <div>
-                <HeaderComponent Title={"List Page"} />
+                <HeaderComponent TestID={"list-page-title"} Title={"List Page"} />
                 <PositiveButtonComponent TestID={"navigate-to-create-page-button"} Icon={<AddCircle/>}
                                          Content={"Create"}
                                          OnClick={() => {

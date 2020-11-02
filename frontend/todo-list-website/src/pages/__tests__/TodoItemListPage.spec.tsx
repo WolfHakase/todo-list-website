@@ -18,7 +18,15 @@ test('renders header', async () => {
     expect(header).toBeTruthy();
 });
 
-test('renders create button', async () => {
+test('renders create button with content', async () => {
+    render(<TodoItemListPage/>);
+    const expectedButtonContent = "Create"
+    const id = 'navigate-to-create-page-button'
+    const button = await screen.findByText(expectedButtonContent)
+    expect(button.textContent).toBe(expectedButtonContent);
+});
+
+test('renders create button with test id', async () => {
     render(<TodoItemListPage/>);
     const expectedButtonContent = "Create"
     const id = 'navigate-to-create-page-button'

@@ -5,13 +5,17 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <h1>
+      <h1
+        data-testid="mock-test-id"
+      >
         mock header
       </h1>
     </div>
   </body>,
   "container": <div>
-    <h1>
+    <h1
+      data-testid="mock-test-id"
+    >
       mock header
     </h1>
   </div>,
