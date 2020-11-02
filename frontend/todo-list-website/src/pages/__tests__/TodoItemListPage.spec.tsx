@@ -8,7 +8,7 @@ test('renders without crashing', () => {
 
 test('renders header', async () => {
     render(<TodoItemListPage/>);
-    const expectedHeader = 'Create Page'
+    const expectedHeader = 'List Page'
     const header = await screen.findByText(expectedHeader)
     expect(header).toBeTruthy();
 })
