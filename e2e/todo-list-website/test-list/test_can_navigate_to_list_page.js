@@ -5,6 +5,11 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
     try {
         // Navigate to Url
         await driver.get('http://localhost:3000/');
+
+        driver.findElement(By.id('list-page-title')).then(null, function(err) {
+            if (err.name === "NoSuchElementError")
+                console.log("Element was missing!");
+        });
     }
     catch(e) {
         console.log("Couldn't navigate to page!");
